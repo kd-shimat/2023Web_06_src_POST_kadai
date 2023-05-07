@@ -1,0 +1,13 @@
+services:
+  php:
+    image: nyanzo/phptest-buster:latest
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+
+  selenium-chrome:
+    image: nyanzo/selenium-local:latest
+    ports:
+      - 4444:4444
+      - 5900:5900
